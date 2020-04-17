@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animacija</title>
+
+    <style>
+
+#box{
+    width: 600px;
+    height: 500px;
+    margin: 80px auto;
+    position: relative;
+    background-color:#050210;
+}
+#box-1{
+    width: 300px;
+    height: 300px;
+    position: relative;
+	border-radius: 50%;
+	margin: 0 auto;
+	top: 115px;
+	background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    animation: animacija 1.5s linear 1s infinite running;
+}
+
+#box-2{
+    width: 250px;
+    height: 250px;
+    position:relative;
+    margin: 0px auto;
+    background-color: #050210;
+    bottom: 160px;
+    border-radius: 50%;
+}
+
+#box-3{
+	position: absolute;
+	width: 250px;
+	height: 250px;
+    bottom: 110px;
+    left: 175px;
+	border-radius: 50%;
+	background: #121229;
+    animation: animacija2 1.5s linear 1s infinite running; 
+}
+
+#box::before{
+    position: absolute;
+    content: '';
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+	top: 90px;
+	left: 125px;
+	background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    animation: animacija 1.5s linear 1s infinite running;
+    filter: blur(30px);
+    
+}
+
+
+@keyframes animacija{
+	0% {
+		transform: rotate(0deg);
+	}
+	
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes animacija2{
+	0% {
+        transform: scale(0.5);
+    
+    }	
+	100% {
+		transform: scale(1);
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+    <div id="box">
+<div id="box-1"> </div>
+<div id="box-2"> </div>
+<div id="box-3"> </div>
+</div>
+
+
+
+</body>
+</html>
